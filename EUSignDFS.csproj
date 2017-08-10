@@ -78,6 +78,14 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="DFSPackHelper.Certificates.cs" />
+    <None Include="EUSignCP.DLL_v1.3.1.36\DSTU4145CacheNB.cap" />
+    <None Include="EUSignCP.DLL_v1.3.1.36\DSTU4145CachePB.cap" />
+    <None Include="EUSignCP.DLL_v1.3.1.36\DSTU4145Parameters.cap" />
+    <None Include="EUSignCP.DLL_v1.3.1.36\ECDHParameters.cap" />
+    <None Include="EUSignCP.DLL_v1.3.1.36\GOST28147SBox.cap" />
+    <None Include="EUSignCP.DLL_v1.3.1.36\GOST34311Parameters.cap" />
+    <None Include="EUSignCP.DLL_v1.3.1.36\PRNGParameters.cap" />
+    <None Include="EUSignCP.DLL_v1.3.1.36\RSAParameters.cap" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,6 +100,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="EUSignCP.DLL_v1.3.1.36\CAConnectors.dll" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\CAGUI.dll" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\CSPBase.dll" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\CSPExtension.dll" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\CSPIBase.dll" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\EPCP.dll" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\EUSignCP.dll" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\ISCP.dll" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\KM.AuthorSCard318.dll" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\KM.BIFITSCAndKey.dll" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\KM.CModGryada61.dll" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\KM.dll" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\KM.EKeyAlmaz1C.dll" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\KM.EKeyCrystal1.dll" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\KM.FileSystem.dll" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\KM.IDCard.dll" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\KM.NCMGryada301.dll" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\KM.PKCS11.dll" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\KM.TCTEllipseSCard.dll" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\KMFileSystemConfiguration.exe" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\LDAPClient.dll" />
+    <Content Include="EUSignCP.DLL_v1.3.1.36\PKIFormats.dll" />
     <Content Include="EUSignDFS.ico" />
     <None Include="Resources\develop.32x32.png" />
     <None Include="Resources\envelop.32x32.png" />
@@ -113,6 +143,9 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>COPY /Y $(ProjectDir)EUSignCP.DLL_v1.3.1.36\* $(ProjectDir)$(OutDir)</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
